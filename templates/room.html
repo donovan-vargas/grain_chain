@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>GrainChain</title>
+    </head>
+    <body>
+        <h1>Prueba de Lógica GrainChain</h1>
+    </body>
+    <table id="" class="display" style="width:60%">
+        <tbody>
+
+        {% for row in room %}
+        <tr>
+            {%for x in row%}
+            {% if x == 3 %}
+                <td style="background: yellow;">{{x}}</td>            
+            {% elif x == 2 %}
+                <td style="background: #ffffcf;">{{x}}</td>
+            {% elif x == 1 %}
+                <td style="background: #000000; color:white">{{x}}</td>
+            {% else %}
+                <td>{{x}}</td>
+            {% endif %}
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+
+    </table>
+</html>
